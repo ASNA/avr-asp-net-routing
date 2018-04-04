@@ -1,0 +1,31 @@
+﻿Using System
+Using System.Data
+Using System.Configuration
+Using System.Collections
+Using System.Web
+Using System.Web.Security
+Using System.Web.UI
+Using System.Web.UI.WebControls
+Using System.Web.UI.WebControls.WebParts
+Using System.Web.UI.HtmlControls
+Using System.Web.Routing
+
+BegClass Links Partial(*Yes) Access(*Public) Extends(System.Web.UI.Page)
+
+    BegSr Page_Load Access(*Private) Event(*This.Load)
+        DclSrParm sender Type(*Object)
+        DclSrParm e Type(System.EventArgs)
+
+		DclFld parameters Type(RouteValueDictionary) 
+		DclFld vpd Type(VirtualPathData) 
+
+		parameters = *New RouteValueDictionary()
+		parameters.Add('locale', 'CA')
+		parameters.Add('year', '2008')
+		parameters.Add('category', 'recreation')
+
+		vpd = RouteTable.Routes.GetVirtualPath(*Nothing, "ExpensesRoute", parameters)
+		HyperLink6.NavigateUrl = vpd.VirtualPath
+	EndSr 
+
+EndClass
