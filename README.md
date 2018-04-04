@@ -16,8 +16,10 @@ ASP.NET routing also lets you virtually group pages so you could also configure 
 
     mywebsite.com/customer/details
 
-> ASP.NET routing is case-insensitive; you can use any case in the URL. 
+![](routing.gif)
 
+> ASP.NET routing is case-insensitive; you can use any case in the URL.
+ 
 Routing is built into .NET (via the [System.Web.Routing namespace](https://msdn.microsoft.com/en-us/library/system.web.routing(v=vs.110).aspx)) and works great with AVR. Support for it is also built into IIS (with no special configuration needed) from version 7 and up. I tested the example that accompanies this article on IIS 10 and it ran just fine. (In very early versions of ASP.NET routing, IIS did require a special URL rewriting module and clumsy configuration.) 
 
 This routing feature may not be something you want to retrofit into exsiting applications, but it's a nice feature for new apps. Semantic routing does coexist nicely with page-based routing so you could easily add it to existing apps for a new group of pages. 
@@ -164,3 +166,6 @@ As we saw before, AVR needs to use its more verbose method of instancing the `Ro
 
 
 Download the full AVR routing example and play around with it. You'll see it used frequently in upcoming AVR for .NET ASP.NET examples. 
+
+
+
