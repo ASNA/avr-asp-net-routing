@@ -1,7 +1,6 @@
 ﻿<%@ Application Language="AVR" %>
 
 <%@ Import Namespace="System.Web.Routing" %> 
-<%@ Import Namespace="ASNA.JsonRestRouting" %> 
 
 <script runat="server">
 
